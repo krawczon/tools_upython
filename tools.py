@@ -1,4 +1,5 @@
 import network
+import os
 
 def ifconfig():
 
@@ -20,3 +21,8 @@ def cp(source_file, destination_file):
 def clear():
     print('\033[2J\033[H', end='')
 
+def ls():
+    files = os.listdir()
+    for file in files:
+        print(file, end='  ')
+    print('')
